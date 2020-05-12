@@ -117,8 +117,8 @@ const goats = [
     isBusy: true,
     beardLength: 'short',
     isFainter: true,
-    imgUrl: 'https://tinyurl.com/y7nq6vkf',
-    age: 10,
+    imgUrl: 'https://media.npr.org/assets/img/2014/12/14/ap798386886673_custom-247a20518bf04f86ef4457d12939f46521c8751b-s800-c85.jpg',
+    age: 1,
   },
   {
     id: 'goat12',
@@ -223,4 +223,12 @@ const goats = [
 
 const getGoats = () => goats;
 
-export default { getGoats };
+const useGoat = (goatId) => {
+  goats.forEach((response) => {
+    if (response.id === goatId) {
+      response.isBusy = true;
+    }
+  });
+};
+
+export default { getGoats, useGoat };
